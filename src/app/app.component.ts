@@ -8,6 +8,9 @@ import { AppService } from './app.service';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+    testCounter: any;
+    baseCounter: any;
+    myCounter: any;
     title = 'app';
 
     constructor(private factory: FactoryService, private appService: AppService) {
@@ -17,5 +20,18 @@ export class AppComponent {
     //
     getUser() {
         this.appService.getUser();
+    }
+
+    doTestCount(value) {
+        this.testCounter = value;
+    }
+
+    doMyCount(value) {
+        this.myCounter = value;
+    }
+
+
+    doBaseCount(value) {
+        this.baseCounter = value;
     }
 }

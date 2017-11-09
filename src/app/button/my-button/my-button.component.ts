@@ -7,12 +7,18 @@ import { BaseButtonComponent } from '../base-button/base-button.component';
     styleUrls: ['./my-button.component.css']
 })
 export class MyButtonComponent extends BaseButtonComponent implements OnInit {
+    private counter = 0;
 
     constructor() {
         super();
     }
 
     ngOnInit() {
+    }
+
+    addCounter() {
+        this.counter++;
+        this.triggerEvent.emit(this.counter);
     }
 
 }

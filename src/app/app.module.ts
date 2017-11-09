@@ -6,6 +6,7 @@ import { FactoryService } from './lib/factory.service';
 import { HttpModule } from '@angular/http';
 import { AppService } from './app.service';
 import { ButtonModule } from './button/button.module';
+import { TestModule } from './test/test.module';
 
 @NgModule({
     declarations: [
@@ -15,6 +16,7 @@ import { ButtonModule } from './button/button.module';
     imports: [
         BrowserModule,
         HttpModule,
+        TestModule,
         ButtonModule
     ],
     providers: [FactoryService, AppService],

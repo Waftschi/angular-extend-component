@@ -4,9 +4,11 @@ import { BaseButtonComponent } from './base-button/base-button.component';
 import { MyButtonComponent } from './my-button/my-button.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [BaseButtonComponent, MyButtonComponent]
+    imports: [
+        CommonModule
+    ],
+    declarations: [BaseButtonComponent, MyButtonComponent],
+    exports: [BaseButtonComponent, MyButtonComponent],
 })
-export class ButtonModule { }
+export class ButtonModule {
+}

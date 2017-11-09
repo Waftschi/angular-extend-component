@@ -1,16 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <button class="btn" (click)="getUser()">Load User</button>
+    <h1>
+        Welcome to {{title}}!
+        <app-test></app-test>
+    </h1>
 
-  <div>
-    <app-my-button></app-my-button>
-  </div>
+    <button class="btn" (click)="getUser()">Load from Backend Factory</button>
 
-  <div>
-    <app-base-button></app-base-button>
-  </div>
+    <div>
+        <app-my-button (triggerEvent)="doMyCount($event)"></app-my-button>
+    </div>
 
+    <div>
+        <app-test-button (triggerEvent)="doTestCount($event)"></app-test-button>
+    </div>
+
+    <h2>My Counter: {{myCounter}} </h2>
+    <h2>Test Counter: {{testCounter}} </h2>
 </div>
