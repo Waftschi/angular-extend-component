@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { FactoryService } from './lib/factory.service';
+import { User } from './lib/user';
 
 // export const ADAPTER_TYPE = 'old-adapter';
-// export const ADAPTER_TYPE = 'new-adapter';
-export const ADAPTER_TYPE = 'default-adapter';
+export const ADAPTER_TYPE = 'new-adapter';
+// export const ADAPTER_TYPE = 'default-adapter';
 
 @Injectable()
 export class AppService {
-    result: any[];
+    result: User;
 
     constructor(private factory: FactoryService) {
     }

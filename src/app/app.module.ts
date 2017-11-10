@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppService } from './app.service';
 import { ButtonModule } from './button/button.module';
 import { TestModule } from './test/test.module';
+import { ConcreteFactoryService } from './lib/concrete-factory.service';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,7 @@ import { TestModule } from './test/test.module';
         TestModule,
         ButtonModule
     ],
-    providers: [FactoryService, AppService],
+    providers: [{provide: FactoryService, useClass: ConcreteFactoryService}, AppService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
