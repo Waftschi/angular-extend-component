@@ -6,19 +6,14 @@
     </h1>
 
     <button class="btn" (click)="getUser()">Load from Backend Factory</button>
-
     <div>
-        <app-my-button (triggerEvent)="doMyCount($event)"></app-my-button>
+        <app-base-button (triggerEvent)="showBaseCount($event)"></app-base-button>
     </div>
 
-    <div>
-        <app-test-button (triggerEvent)="doTestCount($event)"></app-test-button>
-    </div>
+    <!--<div>-->
+        <!--<app-test-button (triggerEvent)="doTestCount($event)"></app-test-button>-->
+    <!--</div>-->
 
-    <div>
-        <app-test-button (triggerEvent)="doTestCount($event)"></app-test-button>
-    </div>
-
-    <h2>My Counter: {{myCounter}} </h2>
+    <h2>BaseCounter: {{baseCounter}} </h2>
     <h2>Test Counter: {{testCounter}} </h2>
 </div>

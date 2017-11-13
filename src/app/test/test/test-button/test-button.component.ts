@@ -1,24 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { BaseButtonComponent } from '../../../button/base-button/base-button.component';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ButtonService } from '../../../button/base-button/button.service';
+
 
 @Component({
     selector: 'app-test-button',
     templateUrl: './test-button.component.html',
     styleUrls: ['./test-button.component.css']
 })
-export class TestButtonComponent extends BaseButtonComponent implements OnInit {
+export class TestButtonComponent implements OnInit {
+    label: string;
     counter = 10;
+    @Output()
+    triggerEvent = new EventEmitter<number>();
 
-    constructor() {
-        super();
+    constructor(private buttonService: ButtonService) {
     }
 
     ngOnInit() {
+        this.label = this.buttonService.getLabel();
     }
 
     testCounter() {
-        this.counter++;
+        this.counter = this.buttonService.calculate();
         this.triggerEvent.emit(this.counter);
     }
-
 }
+

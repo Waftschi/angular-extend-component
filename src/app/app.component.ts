@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FactoryService } from './lib/factory.service';
 import { AppService } from './app.service';
 
 @Component({
@@ -10,28 +9,25 @@ import { AppService } from './app.service';
 export class AppComponent {
     testCounter: any;
     baseCounter: any;
-    myCounter: any;
     title = 'app';
 
-    constructor(private factory: FactoryService, private appService: AppService) {
-
-    }
+    constructor(private appService: AppService) {}
 
     //
     getUser() {
         this.appService.getUser();
     }
 
-    doTestCount(value) {
-        this.testCounter = value;
-    }
+    // doTestCount(value) {
+    //     this.testCounter = value;
+    // }
+    //
+    // doMyCount(value) {
+    //     this.myCounter = value;
+    // }
 
-    doMyCount(value) {
-        this.myCounter = value;
-    }
 
-
-    doBaseCount(value) {
+    showBaseCount(value) {
         this.baseCounter = value;
     }
 }
