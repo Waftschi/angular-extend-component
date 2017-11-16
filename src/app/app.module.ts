@@ -29,7 +29,12 @@ import { config } from './config';
         TestModule,
         ButtonModule
     ],
-    providers: [{provide: FactoryService, useClass: ConcreteFactoryService}, AppService,
+    providers: [
+        {
+            provide: FactoryService,
+            useClass: ConcreteFactoryService
+        },
+        AppService,
         // {
         //     provide: ButtonService,
         //     useClass: MyButtonService
