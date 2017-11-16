@@ -5,7 +5,9 @@
         <app-test></app-test>
     </h1>
 
-    <button class="btn" (click)="getUser()">Load from Backend Factory</button>
+    <div><button class="btn" (click)="setFactory('new-adapter')">Change new Factory</button></div><br>
+    <div><button class="btn" (click)="setFactory('old-adapter')">Change Old Factory</button></div><br>
+    <div><button class="btn" (click)="getUser()">Load from Backend Factory</button></div>
     <div>
         <app-base-button (triggerEvent)="showBaseCount($event)"></app-base-button>
     </div>

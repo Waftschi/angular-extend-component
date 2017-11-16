@@ -12,6 +12,7 @@ interface Factory {
 export class ConcreteFactoryService implements Factory {
 
     constructor(private http: Http) {
+        console.log('concrete factory');
     }
 
     createConcrete(type?: any) {

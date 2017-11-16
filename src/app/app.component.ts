@@ -11,20 +11,16 @@ export class AppComponent {
     baseCounter: any;
     title = 'app';
 
-    constructor(private appService: AppService) {}
+    constructor(private appService: AppService) {
+    }
 
-    //
+    setFactory(type): void {
+        this.appService.setFactory(type);
+    }
+
     getUser() {
         this.appService.getUser();
     }
-
-    // doTestCount(value) {
-    //     this.testCounter = value;
-    // }
-    //
-    // doMyCount(value) {
-    //     this.myCounter = value;
-    // }
 
 
     showBaseCount(value) {
